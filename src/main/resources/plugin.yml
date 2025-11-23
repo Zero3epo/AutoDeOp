@@ -1,0 +1,12 @@
+name: AutoDeOp
+version: '${project.version}'
+main: net.scr.autodeop.AutoDeOp
+api-version: '1.16'
+commands:
+  ado:
+    description: Вайтлист для тех, кто может иметь опку
+    default: op
+permissions:
+  autodeop.use:
+    description: Разрешение на использование команды ado
+    default: op

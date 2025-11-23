@@ -1,0 +1,10 @@
+# Язык / Language: ru / en
+language: 'ru'
+
+# Список игроков, которым разрешено иметь OP / List of players allowed to have OP
+whitelist:
+  - 'Zero3epo'
+  - 'zozer22'
+  - 'Ablar1m'
+  - 'zo2zer22'
+  - 'RayoHaruka'
