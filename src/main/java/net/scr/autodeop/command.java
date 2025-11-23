@@ -104,6 +104,8 @@ public class command implements CommandExecutor {
                 p.sendMessage(ChatColor.RED + usage);
                 return true;
             }
+
+
         } else {
             if(args == null || args.length == 0) {
                 Bukkit.getLogger().info(ChatColor.RED + "Использование: /ado help");
