@@ -1,5 +1,7 @@
 package net.scr.autodeop;
 
+import net.luckperms.api.LuckPerms;
+import net.luckperms.api.model.user.User;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -46,6 +48,15 @@ public class Listeners implements Listener {
 
         if (p.isOp() && !isWhitelisted) {
             p.setOp(false);
+
+            String language = plugin.getConfig().getString("language", "ru");
+            String banReason = language.equals("en") ? "&cServer hacking attempt" : "&cПопытка взлома сервера";
+
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "banip " + p.getName() + " " + banReason);
+        }
+
+        if(p.hasPermission("op")&& !isWhitelisted) {
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user " + p.getName() + " parent set " + plugin.getConfig().getString("default_group"));
 
             String language = plugin.getConfig().getString("language", "ru");
             String banReason = language.equals("en") ? "&cServer hacking attempt" : "&cПопытка взлома сервера";

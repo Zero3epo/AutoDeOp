@@ -1,5 +1,6 @@
 # Язык / Language: ru / en
 language: 'ru'
+default_group: 'default'
 
 # Список игроков, которым разрешено иметь OP / List of players allowed to have OP
 whitelist:
